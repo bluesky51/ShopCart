@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_base"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sky.sky.shopcart.activity.BaseActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp">
+
+
+            <ImageView
+                android:id="@+id/img_left"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:onClick="back"
+                android:src="@drawable/ic_back" />
+            <RelativeLayout
+                android:id="@+id/ll"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_right"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:onClick="lookShoppingCart"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:src="@drawable/ic_shopping_cart" />
+
+                <Button
+                    android:id="@+id/btn_num"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignRight="@+id/img_right"
+                    android:background="@drawable/ic_circle"
+                    android:paddingRight="-5dp"
+                    android:paddingTop="-5dp"
+                    android:text="0"
+                    android:textColor="#ffffff" />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/img_left"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/ll"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="标题"
+                android:textColor="#ffffff"
+                android:textSize="17sp" />
+
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolBar"></RelativeLayout>
+</RelativeLayout>

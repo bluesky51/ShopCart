@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_goods_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sky.sky.shopcart.activity.GoodsDetailActivity">
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100" />
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/progressBar"
+        android:scrollbars="none"></WebView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#88000000"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/btn_buy"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg"
+            android:onClick="buy"
+            android:text="立即购买"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/btn_insert"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/btn_buy"
+            android:background="@drawable/bg"
+            android:onClick="insertDB"
+            android:text="加到购物车"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+</RelativeLayout>
